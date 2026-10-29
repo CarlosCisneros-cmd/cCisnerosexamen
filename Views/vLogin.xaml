@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cCisnerosexamen.Views.vLogin"
+             Title="Login">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+
+            <Label Text="INICIAR SESIÓN"
+                   TextColor="Purple"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+
+            <Image Source="logo_gym.png"
+                   WidthRequest="180"
+                   HeightRequest="180"/>
+
+            <Grid RowSpacing="15"
+                  ColumnSpacing="10"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Usuario"
+                       Style="{StaticResource GlobalEtiquetas}"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+                <Entry x:Name="txtUsuario"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <Label Text="Contraseña"
+                       Style="{StaticResource GlobalEtiquetas}"
+                       Grid.Row="1"
+                       Grid.Column="0"/>
+                <Entry x:Name="txtContrasena"
+                       IsPassword="True"
+                       Grid.Row="1"
+                       Grid.Column="1"/>
+
+                <Button x:Name="btnIniciarSesion"
+                        Text="Iniciar sesión"
+                        Style="{StaticResource GlobalBotones}"
+                        Clicked="btnIniciarSesion_Clicked"
+                        Grid.Row="2"
+                        Grid.Column="0"/>
+                <Button x:Name="btnAcercaDe"
+                        Text="Acerca de"
+                        Style="{StaticResource GlobalBotones}"
+                        Clicked="btnAcercaDe_Clicked"
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cCisnerosexamen.Views.vAcercaDe"
+             Title="Acerca de">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+
+            <Label Text="ACERCA DE"
+                   TextColor="Purple"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Nombre: Carlos Alejandro Cisneros Lugo"
+                   Style="{StaticResource GlobalEtiquetas}"
+                   HorizontalOptions="Center"/>
+            <Label Text="Carrera: Sistemas de Información"
+                   Style="{StaticResource GlobalEtiquetas}"
+                   HorizontalOptions="Center"/>
+            <Label Text="Paralelo: A"
+                   Style="{StaticResource GlobalEtiquetas}"
+                   HorizontalOptions="Center"/>
+
+            <Button x:Name="btnRegresar"
+                    Text="Regresar"
+                    Style="{StaticResource GlobalBotones}"
+                    Clicked="btnRegresar_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

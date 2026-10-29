@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cCisnerosexamen.Views.vResumen"
+             Title="Resumen">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="20">
+
+            <Label x:Name="lblUsuarioConectado"
+                   Style="{StaticResource GlobalUsuario}"/>
+
+            <Label Text="RESUMEN"
+                   TextColor="DarkGreen"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nombre:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="0" Grid.Column="0"/>
+                <Label x:Name="lblNombre" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Apellido:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="1" Grid.Column="0"/>
+                <Label x:Name="lblApellido" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Edad:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="2" Grid.Column="0"/>
+                <Label x:Name="lblEdad" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Fecha de inicio:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="3" Grid.Column="0"/>
+                <Label x:Name="lblFechaInicio" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="Plan:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="4" Grid.Column="0"/>
+                <Label x:Name="lblPlan" Grid.Row="4" Grid.Column="1"/>
+
+                <Label Text="Casillero:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="5" Grid.Column="0"/>
+                <Label x:Name="lblCasillero" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Text="Monto Inicial:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="6" Grid.Column="0"/>
+                <Label x:Name="lblMontoInicial" Grid.Row="6" Grid.Column="1"/>
+
+                <Label Text="Pago mensual:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="7" Grid.Column="0"/>
+                <Label x:Name="lblPagoMensual" Grid.Row="7" Grid.Column="1"/>
+
+                <Label Text="Pago Total:" Style="{StaticResource GlobalEtiquetas}" Grid.Row="8" Grid.Column="0"/>
+                <Label x:Name="lblPagoTotal" Grid.Row="8" Grid.Column="1"/>
+            </Grid>
+
+            <Button x:Name="btnExportar"
+                    Text="Exportar a .txt"
+                    Style="{StaticResource GlobalBotones}"
+                    Clicked="btnExportar_Clicked"/>
+            <Button x:Name="btnCerrarSesion"
+                    Text="Cerrar sesión"
+                    Style="{StaticResource GlobalBotones}"
+                    Clicked="btnCerrarSesion_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
